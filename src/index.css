@@ -1,0 +1,48 @@
+/* resetting styles */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+
+html {
+  font-size: 62.5%;
+  background-color: rgba(173, 132, 78, 0.11);
+  font-family: "Oswald", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+#gsi_312044_458858 {
+  display: block;
+  position: relative;
+  /* top: 0px; */
+  /* left: 0px; */
+  height: 44px;
+  /* width: 267px; */
+  border: 0px;
+}
+
+.haAclf {
+  display: inline-block;
+  width: 100%;
+}
+
+.marker-cluster-small div {
+    background-color: rgb(115, 196, 39);
+}

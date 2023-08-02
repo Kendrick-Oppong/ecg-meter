@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  margin-top: 2rem;
+  color: black;
+  font-size: larger;
+  min-height: 100vh;
+}
+
+
+input {
+  text-align: center;
+  width: 25% !important;
+  margin-block: 1.4rem;
+}
+

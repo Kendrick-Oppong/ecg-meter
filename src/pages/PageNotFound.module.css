@@ -1,0 +1,42 @@
+.mainContainer {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 900px;
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.imageContainer {
+  max-width: 53%;
+  margin-inline: auto;
+}
+
+.msg {
+  margin-block: 2rem;
+}
+
+.msg h1 {
+ font-size: 16px !important;
+}
+
+.msg span {
+  font-style: italic;
+}
+
+.cta {
+  padding: 8px 24px;
+  margin-block: 2rem;
+  border: 1px solid #b13c5e;
+  border-radius: 5px;
+  font-size: large;
+  background-color: #deb8875c;
+  cursor: pointer;
+}
+
+
+/* @600px */
+@media screen and (max-width: 37.7em) {
+  .imageContainer {
+    max-width: 75%;
+  }
+}
