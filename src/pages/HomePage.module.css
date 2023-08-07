@@ -1,0 +1,125 @@
+.main {
+  padding-inline: 2rem;
+  background-color: #e5e5e5;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding-inline: 1rem;
+  padding-block: 2rem 6rem;
+  position: relative;
+}
+
+.title h1 {
+  font-size: 46px;
+  color: rgb(22, 22, 156);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: #d3610d;
+}
+
+.title p {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.imgCont {
+  text-align: center;
+  position: relative;
+}
+
+.hero {
+  width: 70%;
+}
+
+.imgCont img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 30%;
+}
+.imgCont img:nth-child(3) {
+  position: absolute;
+  left: 20%;
+}
+
+.imgCont img:nth-child(4) {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.cta > a {
+  font-size: 12px;
+  min-height: 150px;
+  background-color: #7d3e463a;
+  width: 400px;
+  border-radius: 2rem;
+  justify-content: center;
+  display: flex; /* Add this to create a flex container */
+  align-items: center; /* Center vertically within the div */
+}
+
+.cta > a:hover {
+  background-color: darkorange;
+  cursor: pointer;
+}
+
+/* @900px */
+@media screen and (max-width: 56.25em) {
+  .mainContainer {
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+    margin-block: 2rem;
+  }
+
+  .imgCont {
+    margin-block: 8rem 3rem;
+  }
+
+  .hero {
+    width: 50%;
+  }
+
+  .cta {
+    display: block;
+    text-align: center;
+  }
+
+  .cta a {
+    margin-inline: auto;
+    margin-block: 3rem;
+  }
+}
+
+/* @500px */
+@media screen and (max-width: 31.25em) {
+  .hero {
+    width: 90%;
+  }
+}
+
+/* @470px */
+@media screen and (max-width: 29.375em) {
+  .hero {
+    width: 100%;
+  }
+
+  .cta > a {
+    width: 300px;
+  }
+}

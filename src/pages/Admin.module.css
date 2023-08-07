@@ -1,0 +1,67 @@
+.main {
+  min-height: 100vh;
+  /* display: grid; */
+  grid-template-columns: 200px 1fr;
+  font-size: large;
+  gap: 3rem;
+}
+
+.main aside {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: hsla(277, 71%, 53%, 0.555);
+  align-items: center;
+  padding-inline: 2rem;
+  backdrop-filter: blur(2px);
+
+  /* background-color: hsl(277.47deg 71% 53% / 70%); */
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* padding-top: 4rem; */
+}
+
+.main aside img {
+  width: 80px;
+  /*  margin-bottom: 1rem; */
+}
+
+.exit {
+  /*  margin-top: 1.5rem; */
+  padding: 1rem 2rem;
+  background: #e4c6d9;
+  border-radius: 1.3rem;
+}
+
+.exit:hover {
+  background-color: hsla(60, 100%, 49%, 0.729);
+}
+
+.dashWrapper {
+  padding-top: 12rem;
+  padding-inline: 3rem;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-block: 3rem;
+}
+
+.childWrapper {
+  background-color: #e4c6d9;
+  border-radius: 1.8rem;
+  border: 1px dashed;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.childWrapper:hover {
+  background-color: hsla(60, 100%, 49%, 0.729);
+}

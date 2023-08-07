@@ -1,33 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import globeMap from "../assets/world_map.jpg";
-import styles from "./SignInPage.module.css";
+// import * as Yup from "yup";
+import powergrid from "../assets/power_grid.avif";
+import styles from "./AdminSignIn.module.css";
 import { useMap } from "../context/MapProvider";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import view from "../assets/view.png";
 import hide from "../assets/hide.png";
 import useTitle from "../hooks/useTitle";
+import { validationSchema } from "./SignInPage";
 
 // defining Yup validation schema
 
-export const validationSchema = Yup.object().shape({
-  password: Yup.number()
-    .typeError("Password must be a number type")
-    .required("Required")
-    .test(
-      "is-five-to-eight-digits",
-      "Password must be 5 to 10 digits",
-      (value) => /^\d{5,10}$/.test(value)
-    ),
-});
-
-function SignInPage() {
-  const { setMeterSerialNumber, passwordMessage } = useMap();
+function AdminSignIn() {
+  const { setAdminPassword, passwordMessage } = useMap();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  useTitle("signin_customer");
+  useTitle("signin_admin");
 
   const initialValues = {
     password: "",
@@ -35,18 +25,18 @@ function SignInPage() {
 
   const handleSubmit = (values) => {
     const { password } = values;
-    setMeterSerialNumber(password);
-    navigate("/customerInfo");
+    setAdminPassword(Number(password));
+    navigate("/admin");
   };
 
   return (
     <div className={styles.outermostCont}>
       <div className={styles.aside}>
-        <img src={globeMap} alt="world map" />
+        <img src={powergrid} alt="power grid" />
       </div>
       <div className={styles.mainContentWrapper}>
         <div className={styles.mainContent}>
-          <h1>Enter your meter serial number to continue</h1>
+          <h1>Enter Your ID To Continue</h1>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -61,7 +51,7 @@ function SignInPage() {
                 )}
                 <div>
                   <div className={styles.password}>
-                    <label htmlFor="password">Customer ID</label>
+                    <label htmlFor="password">ID</label>
                   </div>
                   <div style={{ position: "relative", marginBottom: "0" }}>
                     <Field
@@ -89,7 +79,7 @@ function SignInPage() {
                 </div>
                 <div>
                   <button type="submit" className={styles.cta}>
-                    Fetch Data
+                    Log In
                   </button>
                 </div>
               </Form>
@@ -101,4 +91,4 @@ function SignInPage() {
   );
 }
 
-export default SignInPage;
+export default AdminSignIn;

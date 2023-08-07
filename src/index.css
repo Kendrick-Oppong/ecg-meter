@@ -24,6 +24,7 @@ picture {
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -31,10 +32,8 @@ a {
 #gsi_312044_458858 {
   display: block;
   position: relative;
-  /* top: 0px; */
-  /* left: 0px; */
+
   height: 44px;
-  /* width: 267px; */
   border: 0px;
 }
 
@@ -43,6 +42,86 @@ a {
   width: 100%;
 }
 
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  max-height: 600px !important;
+}
+
 .marker-cluster-small div {
-    background-color: rgb(115, 196, 39);
+  background-color: rgb(115, 196, 39);
+  border-bottom: 3px solid yellow !important;
+}
+
+.css-1ex1afd-MuiTableCell-root {
+  font-size: 16px !important;
+  font-family: "Oswald", sans-serif !important;
+  border-bottom: 9px solid rgb(231, 220, 220) !important;
+}
+
+.css-y8ay40-MuiTableCell-root {
+  background-color: burlywood !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  border-bottom: 9px solid rgb(231, 220, 220) !important;
+
+  padding: 2rem !important;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  background-color: #c344ec69 !important;
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+.css-1q1u3t4-MuiTableRow-root:hover {
+  background-color: antiquewhite !important;
+}
+
+/* pagination */
+.css-levciy-MuiTablePagination-displayedRows {
+  font-size: 16px !important;
+}
+
+/* select input , rows per page*/
+.css-194a1fa-MuiSelect-select-MuiInputBase-input,
+.css-pdct74-MuiTablePagination-selectLabel {
+  font-size: 16px !important;
+  outline: 1px solid blue !important;
+}
+
+.css-194a1fa-MuiSelect-select-MuiInputBase-input:hover,
+.css-pdct74-MuiTablePagination-selectLabel:hover {
+  outline: 1px solid blue !important;
+}
+
+/* prev icon, next icon */
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: large;
+}
+
+/* pagination container */
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+  background-color: burlywood !important;
+}
+
+/* input */
+.css-bsph2u-MuiTableCell-root {
+  width: 100% !important;
+}
+
+.css-bsph2u-MuiTableCell-root form {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.css-bsph2u-MuiTableCell-root form input,
+.css-bsph2u-MuiTableCell-root form input::placeholder {
+  font-size: 18px !important;
+  border: 1px solid blue !important;
+  border-radius: 0.5rem;
+}
+
+/* input placeholder */
+.css-bsph2u-MuiTableCell-root form input,
+.css-bsph2u-MuiTableCell-root form input::placeholder {
+  border: none !important;
 }

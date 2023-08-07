@@ -1,0 +1,88 @@
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  font-size: large;
+  gap: 3rem;
+}
+
+.main aside {
+  background-color: hsl(277.47deg 71% 53% / 70%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.main aside img {
+  width: 90px;
+  margin-bottom: 1rem;
+}
+
+.exit {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: #e4c6d9;
+  border-radius: 1.3rem;
+}
+
+.exit:hover {
+  background-color: hsla(60, 100%, 49%, 0.729);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-size: small;
+  gap: 1rem;
+  text-align: center;
+  margin-right: 3rem;
+  padding-block: 4rem;
+}
+
+.childWrapper {
+  background-color: #e4c6d9;
+  border-radius: 1.8rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed;
+}
+
+.dashboard > .childWrapper:last-child {
+  grid-column: 1 / -1;
+}
+
+.childWrapper p {
+  font-size: large;
+  margin-block: 1rem;
+}
+
+.arrears {
+  color: red;
+}
+
+/* 570px */
+@media screen and (max-width: 35.625em) {
+  .main {
+    display: block !important;
+    margin: 3rem;
+  }
+
+  .main aside {
+    padding: 4rem;
+    border-radius: 2rem;
+  }
+
+  .dashboard {
+    margin-right: 0;
+    margin-top: 5rem;
+    gap: 3rem;
+  }
+  .childWrapper {
+    height: 200px;
+  }
+}

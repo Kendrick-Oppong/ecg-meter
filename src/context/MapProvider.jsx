@@ -13,7 +13,7 @@ export function MapProvider({ children }) {
   const [markersData, setMarkersData] = useState([]);
   const [meterSerialNumber, setMeterSerialNumber] = useState("");
   const [passwordMessage, setPasswordMessage] = useState("");
-
+  const [adminPassword, setAdminPassword] = useState("");
   useEffect(() => {
     async function fetchData() {
       try {
@@ -21,21 +21,16 @@ export function MapProvider({ children }) {
         const res = await fetch(
           "https://getpantry.cloud/apiv1/pantry/3b1cf39b-ed0e-4b07-94ce-8c14c403d365/basket/ne"
         );
-
-        if (res.ok === false) setError(true);
         const data = await res.json();
         setMarkersData(data.results);
         setLoading(false);
       } catch (error) {
+        setError(true);
         console.error(error.message + " data");
       }
     }
     fetchData();
   }, []);
-
-  /* function logIn(email, password) {
-    return "";
-  } */
 
   return (
     <MapContext.Provider
@@ -47,6 +42,8 @@ export function MapProvider({ children }) {
         setMeterSerialNumber,
         passwordMessage,
         setPasswordMessage,
+        adminPassword,
+        setAdminPassword,
       }}
     >
       {children}
