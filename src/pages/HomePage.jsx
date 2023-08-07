@@ -1,7 +1,7 @@
 import styles from "./HomePage.module.css";
 import lady from "../assets/lady.png";
 import work from "../assets/confetti.png";
-import star from "../assets/Stars.png";
+import star from "../assets/stars.png";
 import tickstar from "../assets/checkmark.png";
 import { Link } from "react-router-dom";
 
